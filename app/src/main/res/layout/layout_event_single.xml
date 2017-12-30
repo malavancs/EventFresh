@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/sample"
+        android:layout_margin="@dimen/dp4"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageview_event"
+        android:contentDescription="@string/event_image" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginRight="@dimen/dp4"
+        android:layout_marginBottom="@dimen/dp4"
+        android:background="@color/black"
+        android:layout_below="@id/imageview_event"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:id="@+id/date"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="@string/month"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/dp4"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="@string/date"
+                android:layout_margin="@dimen/dp4"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/dp4"
+                android:layout_weight="0.5"
+                android:text="@string/day"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/date"
+            android:layout_toEndOf="@+id/date"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/view"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/view"
+            android:paddingStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:paddingRight="@dimen/dp20">
+
+            <!-- For each textview place add drawble left icon as custom one with white color -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/dp4"
+                android:id="@+id/textview_event_name"
+                android:text="@string/event_name"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_weight="0.5"
+
+          android:id="@+id/textview_event_location"
+          android:text="@string/event_locaiton"
+          android:layout_margin="@dimen/dp4"
+            android:lines="1"
+          android:drawableTint="@color/white"
+          android:drawablePadding="@dimen/dp4"
+          android:drawableStart="@android:drawable/ic_lock_idle_alarm"
+          android:textStyle="bold"
+          android:textColor="@color/white"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_weight="0.5"
+          android:id="@+id/textview_event_timing"
+          android:layout_margin="@dimen/dp4"
+          android:drawableStart="@android:drawable/ic_lock_idle_alarm"
+          android:drawableTint="@color/white"
+          android:drawablePadding="@dimen/dp4"
+          android:text="@string/event_timing"
+          android:textStyle="bold"
+          android:lines="1"
+          android:textColor="@color/white"/>
+
+  </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp4"
+            android:text="@string/price"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+</RelativeLayout>
+
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>
